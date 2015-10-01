@@ -1,0 +1,92 @@
+<!-- Full Page Image Background Carousel Header -->
+
+<div id="myCarousel" class="carousel slide">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+  <li data-target="#myCarousel" data-slide-to="1"></li>
+  <li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
+<!-- Wrapper for Slides -->
+<div class="carousel-inner">
+  <div class="item active">
+    <div class="fill" style="background-color:#e89f49;background: linear-gradient(to top, #FE8266, #FFCC69);">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-lg-offset-10"> <img class="img-responsive" src="img/logo.png" alt="" width="200" align="right" /></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12"> <img class="img-responsive" src="img/g1.png" alt="" height="182">
+              <div class="intro-text"> <span class="skills">Отдыхай и оценивай <br>
+                качество твоих путешествий <br>
+                от туроператора "НТК Интурист"</span> </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="carousel-caption"> </div>
+  </div>
+  <div class="item">
+    <!-- Set the second background image using inline CSS below. -->
+    <div class="fill" style="background-color:#2c6f7a; background: linear-gradient(to top, #0094B0, #6ACC70);">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-lg-offset-10"> <img class="img-responsive" src="img/logo.png" alt="" width="200" align="right"></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12"> <img class="img-responsive" src="img/g2.png" alt="" height="182">
+              <div class="intro-text"> <span class="skills">Отдыхая, делись фото и отзывами <br>
+                и получай за это бонусы<br>
+                на следующее путешествие</span> </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="carousel-caption"> </div>
+  </div>
+  <div class="item">
+    <!-- Set the third background image using inline CSS below. -->
+    <div class="fill" style="background-color:#ef485d; background: linear-gradient(to top, #FF5181, #FF5954);">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-lg-offset-10"> <img class="img-responsive" src="img/logo.png" alt="" width="200" align="right"></div>
+          </div>
+          <div class="row-fluid">
+            <div class="col-lg-12"> <img class="img-responsive" src="img/g3.png" alt="" height="182">
+              <form novalidate="true" id="subscribe">
+                <div class="form-group col-lg-12 floating-label-form-group">
+                  <label class="sr-only">Email</label>
+                  <input name="EMAIL" ng-model="my_email" class="form-control" placeholder="Введите Email" />
+                </div>
+                <button type="submit" class="btn btn-danger" ng-click="registrate(my_email)">Зарегистрироваться</button>
+              </form>
+              <div class="intro-text"><a href="#/index_enter.html" class="link" ng-click="SetEmailToLogin(my_email)">Войти</a></div>
+              <div class="intro-text"> <span class="skills">Пароль для входа<br>
+                будет отправлен на твой email</span> </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="carousel-caption"> </div>
+  </div>
+</div>
+<!-- active mobile swip-->
+<script>
+$(document).ready(function() {
+$("#myCarousel").swiperight(function() {
+$(this).carousel('prev');
+});
+$("#myCarousel").swipeleft(function() {
+$(this).carousel('next');
+});
+$("#myCarousel").scrollstop(function() {
+$(this).carousel('false');
+});
+});
+</script>

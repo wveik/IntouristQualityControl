@@ -1,0 +1,91 @@
+/*!
+ * Start Bootstrap - Full Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html, body {
+	height: 100%;
+}
+.carousel, .item, .active {
+	height: 100%;
+}
+.carousel-inner {
+	height: 100%;
+}
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+.img-centered {
+	margin: 0 auto;
+}
+.form-control {
+	border:2px solid #a51b32;
+	width:250px;
+	margin: auto;
+}
+#name{
+	border:2px solid #2e6da4;
+	width:250px;
+	margin:inherit;
+}
+#message{
+	border:2px solid #2e6da4;
+	width:250px;	
+	margin:inherit;
+}
+
+.floating-label-form-group {
+	position: relative;
+	margin-top:-20px;
+}
+.btn-danger{
+	color:#FFF;
+	background-color:#a51b32;
+	margin: auto;
+	width:250px;
+}
+header {
+	text-align: center;
+	color: #fff;
+}
+header .container {
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+header img {
+	display: block;
+	margin: 0 auto 0px;
+}
+.intro-text {
+	padding-top:10px;}
+	
+header .intro-text .skills {
+	font-size: 1.25em;
+	font-weight: 300;
+}
+header .intro-text .link {
+	text-decoration:none;	
+	color:#fff;	
+}
+footer {
+	margin: 50px 0;
+}
+.carousel-control.left {
+	
+	background-repeat:repeat-x
+}
+.carousel-control.right {
+	right:0;
+	left:auto;
+	
+	background-repeat:repeat-x
+}

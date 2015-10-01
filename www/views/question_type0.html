@@ -1,0 +1,39 @@
+
+<div class="container-fluid" id="wrap">
+  <div class="row-fluid">
+    <div class="col-md-12">
+      <h2 class="page-header"><a href back-button><span class="glyphicon glyphicon-arrow-left"></span></a> {{selected.Topic.MTL_NAME}}</h2>
+      <p>{{selected.Topic.MTL_DESCRIPTIONS}}</p>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="col-md-12">
+      <h6 class="text-right">Общая оценка {{selected.Topic.MTL_RATING}}</h6>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="col-md-12">
+      <h4 class="tour-line text-center">НТК Интурист </h4>
+    </div>
+  </div>
+  <div ng-repeat="item in selected.QuestionList">
+    <div class="row-fluid">
+      <div class="col-xs-12 tour-line">
+        <div class="pull-left">
+          <div class="ratings2">
+            <rating  ng-model="item.MQL_RATING" max="item.MQL_MAX_VALUE"></rating>
+          </div>
+          <h6>{{item.MQL_QUESTION}}</h6>
+        </div>
+        <a href="#/message.html"><img class="pull-right" src="img/v1.png" border="0" /></a> </div>
+    </div>
+  </div>
+
+  
+  <div class="row-fluid">
+    <div class="col-xs-12 text-center">
+      <button type="submit" class="btn btn-primary" ng-click="SendRating()">Сохранить оценку</button>
+    </div>
+  </div>
+</div>
+<div ng-include src="'partition/footer.html'"></div>

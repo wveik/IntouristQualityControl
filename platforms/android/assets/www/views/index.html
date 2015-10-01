@@ -1,0 +1,30 @@
+
+<!-- Page Content -->
+<div class="container-fluid" id="wrap">
+  <div class="row-fluid">
+    <div class="col-md-12">
+      <h2 class="page-header">Контроль качества</h2>
+      <p>Оставляем отзывы и ставим оценки по директорскому туру</p>
+    </div>
+
+
+    <div class="col-md-12">
+      <div class="row">
+        <div ng-repeat="item in TopicList">
+          <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" ng-click="GoToQuestion(item)">
+          <div class="thumbnail">
+            <div class="caption">
+              <h4>{{ item.Topic.MTL_NAME }}</h4>
+            </div>
+            <img src="img/{{item.Topic.MTL_PICTURE}}" alt="" border="0" class="img-responsive" />
+            <div class="ratings">
+              <rating  ng-model="item.Topic.MTL_RATING" max="5" readonly="true"></rating>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-include src="'partition/footer.html'"></div>
