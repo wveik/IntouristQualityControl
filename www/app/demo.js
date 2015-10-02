@@ -37,8 +37,6 @@ app.controller('MainCtrl', function ($scope, $http, $location, $window) {
   
 	$scope.registrate = function (my_email) {
 
-		var url = $scope.path + "/Registration?login=" + my_email + "/callback=JSON_CALLBACK";
-
 		$http({
 	        method  : "POST",
 	        url     : $scope.path + "/Registration",
