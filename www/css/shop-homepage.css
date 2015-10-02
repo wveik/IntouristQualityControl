@@ -34,6 +34,10 @@ body {
 .thumbnail {
 	border-radius: 10px;
 }
+#tour{
+	margin-top:20px;
+	background-color: #E4E4E4;
+	border-radius: 4px;}
 .navbar-brand {
 	margin-top:-20px;
 }

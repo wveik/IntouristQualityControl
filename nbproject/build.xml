@@ -154,7 +154,7 @@ made subject to such option by the copyright holder.
             <arg value="platform"/>   
             <arg value="add"/>   
             <arg value="android"/>
-            <arg value="--release" />
+            
         </exec>
     </target>
     
