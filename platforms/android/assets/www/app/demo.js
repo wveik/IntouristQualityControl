@@ -35,24 +35,18 @@ app.controller('MainCtrl', function ($scope, $http, $location, $window) {
 	$scope.selected = null;
     $scope.sum_bonus = 0;
 
-    //Окраска нижнего меню
-    $scope.template_class_pig = "glyphicon glyphicon-piggy-bank";
-    $scope.class_pig = $scope.template_class_pig;
+    
 
-    $scope.template_class_start = "glyphicon glyphicon glyphicon-star";
-    $scope.class_star = $scope.template_class_start;
-
-    $scope.template_class_doc = "glyphicon glyphicon glyphicon-list-alt";
-    $scope.class_doc = $scope.template_class_doc;
-
-    $scope.template_class_info = "glyphicon glyphicon glyphicon-briefcase";
-    $scope.class_info = $scope.template_class_info;
+    $scope.SetFooterClass = function(){
+        //Окраска нижнего меню
+        $scope.class_pig = "glyphicon glyphicon-piggy-bank";
+        $scope.class_star = "glyphicon glyphicon glyphicon-star";
+        $scope.class_doc = "glyphicon glyphicon glyphicon-list-alt"; 
+        $scope.class_info = "glyphicon glyphicon glyphicon-briefcase";
+    };
 
 	$scope.$on("$routeChangeSuccess", function (scope, next, current) {
-        $scope.class_pig = $scope.template_class_pig;
-        $scope.class_star = $scope.template_class_start;
-        $scope.class_doc = $scope.template_class_doc;
-        $scope.class_info = $scope.template_class_info;
+        $scope.SetFooterClass();
 
         if(next.$$route.pig)    $scope.class_pig += " g_b";
         if(next.$$route.star)   $scope.class_star += " g_b";
