@@ -1,31 +1,31 @@
 <!-- Page Content -->
 
 <div class="container-fluid" id="wrap">
-  <div class="row-fluid">
-    <div class="col-md-12">
-      <h2 class="page-header text-center">Контроль качества</h2>
-      <p>VII International Travel Forum <br />с 4 по 8 октября в Турции в отеле Liberty Hotels Lykia 5* и Sentido Hotels Lykia 5*. </p>
-    </div>
-    <div class="col-md-12">
-      <div class="row">
-        <div ng-repeat="item in TopicList">
-          <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4" ng-click="GoToQuestion(item)">
-            <div class="thumbnail">
-              <div class="caption">
-                <h4>{{ item.Topic.MTL_NAME }}</h4>
-              </div>
-              <img src="img/{{item.Topic.MTL_PICTURE}}" alt="" border="0" class="img-responsive" />
-              <div class="ratings">
-                <rating  ng-model="item.Topic.MTL_RATING" max="5" readonly="true"></rating>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12">
-      <p>В этом разделе вы можете оценивать ваши актуальные туры и оставлять отзывы</p>
-    </div>
+    <div class="row-fluid">
+      <div class="col-md-12">
+        <h2 class="page-header text-center">Контроль качества</h2>
+        <p>VII International Travel Forum <br />с 4 по 8 октября в Турции в отеле Liberty Hotels Lykia 5* и Sentido Hotels Lykia 5*. </p>
       </div>
-    </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div ng-repeat="item in TopicList">
+                  <div class="col-md-4 col-xs-4 col-sm-4">
+                      <div class="thumbnail" ng-click="GoToQuestion(item)">
+                            <div class="caption">
+                              <h4>{{ item.Topic.MTL_NAME }}</h4>
+                            </div>
+                          <img src="img/{{item.Topic.MTL_PICTURE}}" alt="" border="0" class="img-responsive" />
+                            <div class="ratings">
+                              <rating  ng-model="item.Topic.MTL_RATING" max="5" readonly="true"></rating>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-12">
+                <p>В этом разделе вы можете оценивать ваши актуальные туры и оставлять отзывы</p>
+              </div>
+          </div>
+      </div>
   </div>
-</div>
 <div ng-include src="'partition/footer.html'"></div>

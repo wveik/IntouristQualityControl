@@ -10,7 +10,7 @@
                     "/*": [
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
@@ -24,7 +24,7 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
+                            "count": 2
                         }
                     ]
                 }
@@ -32,6 +32,9 @@
         }
     },
     "installed_plugins": {
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.coolappz.IntouristQualityControl"
+        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.coolappz.IntouristQualityControl"
         }

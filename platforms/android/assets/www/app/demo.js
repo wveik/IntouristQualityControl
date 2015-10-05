@@ -5,14 +5,14 @@ app.config(function($routeProvider) {
   $routeProvider.when('/index.html',			{templateUrl: 'views/index.html', reloadOnSearch: false, star : true});   
   $routeProvider.when('/test.html', 			{templateUrl: 'views/test.html', reloadOnSearch: false}); 
   $routeProvider.when('/index_enter.html',		{templateUrl: 'views/index_enter.html', reloadOnSearch: false}); 
-  $routeProvider.when('/question_type0.html',	{templateUrl: 'views/question_type0.html', reloadOnSearch: false, star : true}); 
-  $routeProvider.when('/question_type1.html',	{templateUrl: 'views/question_type1.html', reloadOnSearch: false, star : true}); 
   $routeProvider.when('/load.html',				{templateUrl: 'views/load.html', reloadOnSearch: false}); 
   $routeProvider.when('/message.html',			{templateUrl: 'views/message.html', reloadOnSearch: false}); 
   $routeProvider.when('/plane.html',            {templateUrl: 'views/plane.html', reloadOnSearch: false}); 
   $routeProvider.when('/bonus.html',            {templateUrl: 'views/bonus.html', reloadOnSearch: false, pig : true}); 
   $routeProvider.when('/doc.html',              {templateUrl: 'views/doc.html', reloadOnSearch: false, doc : true});
-  $routeProvider.when('/infotour.html',         {templateUrl: 'views/infotour.html', reloadOnSearch: false, info : true}); 
+  $routeProvider.when('/infotour.html',         {templateUrl: 'views/infotour.html', reloadOnSearch: false, info : true});   
+  $routeProvider.when('/question_type0.html',   {templateUrl: 'views/question_type0.html', reloadOnSearch: false, star : true}); 
+  $routeProvider.when('/question_type1.html',   {templateUrl: 'views/question_type1.html', reloadOnSearch: false, star : true}); 
 });
 
 app.directive( 'backButton', function() {
@@ -62,7 +62,7 @@ app.controller('MainCtrl', function ($scope, $http, $location, $window) {
 
     $scope.SetMessageName = function(name){
         $scope.message_name = name;
-    }
+    };
 
 	$scope.registrate = function (my_email) {
 
@@ -84,7 +84,7 @@ app.controller('MainCtrl', function ($scope, $http, $location, $window) {
             alert('Данный e-mail уже зарегистрирован, нажмите ВОЙТИ');
         });
 
-	}    
+	};    
 
 	$scope.enter = function (login, password) { 
 		$location.path( "/load.html" );
@@ -114,7 +114,7 @@ app.controller('MainCtrl', function ($scope, $http, $location, $window) {
             alert('Неверен EMAIL или пароль');
             $location.path( "/index.html" );
         });
-	}
+	};
 
 	$scope.GetTopicList = function (login, password) { 
 
@@ -133,18 +133,18 @@ app.controller('MainCtrl', function ($scope, $http, $location, $window) {
         error(function (data, status, headers, config) {
             console.log(data);
         });
-	}
+	};
 
 	$scope.GoToQuestion = function (item){
 
         $scope.selected = item;
 
-		if(parseInt($scope.selected.Topic.MTL_TYPE) == 0) {
+		if(parseInt($scope.selected.Topic.MTL_TYPE) === 0) {
 			$location.path( "/question_type0.html" );
 		}else{
 			$location.path( "/question_type1.html" );
 		}
-	}
+	};
 
 	$scope.SendRating = function(){
 
@@ -169,7 +169,7 @@ app.controller('MainCtrl', function ($scope, $http, $location, $window) {
             // $location.path( "/index.html" );
             $window.history.back();
         });
-	}
+	};
 
     $scope.GetBonusSum = function(){
 
@@ -192,10 +192,10 @@ app.controller('MainCtrl', function ($scope, $http, $location, $window) {
             // $location.path( "/index.html" );
             $window.history.back();
         });
-    }
+    };
 
 	$scope.SetEmailToLogin = function(my_email){
 		$scope.login = my_email;
-	}
+	};
   
 });
